@@ -25,8 +25,8 @@ export const products: Product[] = [
     category: 'men',
     subcategory: 'jackets',
     images: [
-      'https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=800&q=80',
-      'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80',
+      'https://imgs.search.brave.com/78XEoAVqud4PNEHPgRwsRp8jipj8rCg24dKKzBvGyDk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzYyMzcyNTgzL3Iv/aWwvYTkwYTMzLzcz/NDUwNjIzNTIvaWxf/MzAweDMwMC43MzQ1/MDYyMzUyX2NnY3Qu/anBn',
+      'https://images.unsplash.com/photo-1547222246-6d68a0f35395?q=80&w=703&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -46,8 +46,8 @@ export const products: Product[] = [
     category: 'men',
     subcategory: 'pants',
     images: [
-      'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&q=80',
-      'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80',
+      'https://i.pinimg.com/736x/bc/a8/79/bca87911be3a9bd8dacb9fb39efbd929.jpg',
+      'https://i.pinimg.com/736x/57/66/69/57666990993536eb69f02be11b1c4cd9.jpg',
     ],
     sizes: ['28', '30', '32', '34', '36', '38'],
     colors: [
@@ -67,8 +67,8 @@ export const products: Product[] = [
     category: 'women',
     subcategory: 'fleece',
     images: [
-      'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&q=80',
-      'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&q=80',
+      'https://i.pinimg.com/1200x/a2/05/0c/a2050ced9901aad140c10f8a2b766f0e.jpg',
+      'https://i.pinimg.com/736x/21/c1/a0/21c1a0738bd77f057ad5cb7154a5183e.jpg',
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     colors: [
@@ -88,8 +88,8 @@ export const products: Product[] = [
     category: 'gear',
     subcategory: 'footwear',
     images: [
-      'https://images.unsplash.com/photo-1520219306100-ec4afeeefe58?w=800&q=80',
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80',
+      'https://i.pinimg.com/1200x/e1/5f/0f/e15f0f6d901c7dcf979a74b8a1903ee0.jpg',
+      'https://i.pinimg.com/1200x/46/1a/0c/461a0c031f8722a5e50f0319266394a4.jpg',
     ],
     sizes: ['7', '8', '9', '10', '11', '12', '13'],
     colors: [
@@ -108,8 +108,8 @@ export const products: Product[] = [
     category: 'gear',
     subcategory: 'packs',
     images: [
-      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80',
-      'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&q=80',
+      'https://i.pinimg.com/736x/82/cf/f1/82cff14a4b341a8edfc2e1de4a94dfe7.jpg',
+      'https://i.pinimg.com/736x/5e/b8/ae/5eb8ae936cf95a53b802eca8a2305677.jpg',
     ],
     sizes: ['S/M', 'M/L'],
     colors: [
