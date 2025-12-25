@@ -5,8 +5,8 @@ import { categories } from '@/data/products';
 
 const categoryImages = [
   'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80',
-  'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80',
-  'https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=800&q=80',
+  'https://images.unsplash.com/photo-1609333902660-0123cce702dd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://plus.unsplash.com/premium_photo-1706625674606-3a666c444885?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 ];
 
 const CategoriesSection: React.FC = () => {
