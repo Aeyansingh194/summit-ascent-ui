@@ -38,46 +38,46 @@ const Loader: React.FC<LoaderProps> = ({ onLoadingComplete }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* SVG Filter for Gooey Effect */}
-          <svg className="absolute w-0 h-0">
-            <defs>
-              <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix
-                  in="blur"
-                  mode="matrix"
-                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
-                  result="goo"
-                />
-                <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-              </filter>
-            </defs>
-          </svg>
-
-          {/* Morphing Text */}
-          <div className="relative gooey-text">
+          {/* Morphing Text - Using CSS animations for cross-browser support */}
+          <div className="relative">
             <AnimatePresence mode="wait">
               <motion.span
                 key={currentWordIndex}
-                className="loader-text text-cream block"
-                initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.9 }}
-                animate={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-                exit={{ opacity: 0, filter: 'blur(10px)', scale: 1.1 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                className="block text-cream font-display text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light tracking-[0.2em] sm:tracking-[0.3em] uppercase"
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -20, scale: 1.05 }}
+                transition={{ 
+                  duration: 0.5, 
+                  ease: [0.16, 1, 0.3, 1],
+                }}
               >
                 {words[currentWordIndex]}
               </motion.span>
             </AnimatePresence>
+            
+            {/* Glow effect behind text */}
+            <motion.div
+              className="absolute inset-0 -z-10 blur-3xl opacity-30"
+              style={{
+                background: 'radial-gradient(circle, hsl(var(--terracotta)) 0%, transparent 70%)',
+              }}
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.2, 0.4, 0.2],
+              }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
           </div>
 
           {/* Loading Progress */}
           <motion.div
-            className="absolute bottom-20 left-1/2 -translate-x-1/2"
+            className="absolute bottom-12 sm:bottom-20 left-1/2 -translate-x-1/2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <div className="w-48 h-px bg-charcoal-light overflow-hidden">
+            <div className="w-32 sm:w-48 h-px bg-charcoal-light overflow-hidden rounded-full">
               <motion.div
                 className="h-full bg-cream/60"
                 initial={{ width: '0%' }}
@@ -89,7 +89,7 @@ const Loader: React.FC<LoaderProps> = ({ onLoadingComplete }) => {
 
           {/* Decorative Elements */}
           <motion.div
-            className="absolute top-1/4 left-1/4 w-2 h-2 bg-terracotta rounded-full"
+            className="absolute top-1/4 left-[15%] sm:left-1/4 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-terracotta rounded-full"
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.5, 1, 0.5],
@@ -97,12 +97,20 @@ const Loader: React.FC<LoaderProps> = ({ onLoadingComplete }) => {
             transition={{ duration: 2, repeat: Infinity }}
           />
           <motion.div
-            className="absolute bottom-1/3 right-1/4 w-3 h-3 bg-sage rounded-full"
+            className="absolute bottom-1/3 right-[15%] sm:right-1/4 w-2 sm:w-3 h-2 sm:h-3 bg-sage rounded-full"
             animate={{
               scale: [1, 1.3, 1],
               opacity: [0.3, 0.8, 0.3],
             }}
             transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
+          />
+          <motion.div
+            className="absolute top-1/2 right-[10%] sm:right-[15%] w-1 sm:w-1.5 h-1 sm:h-1.5 bg-accent rounded-full"
+            animate={{
+              scale: [1, 1.4, 1],
+              opacity: [0.4, 0.9, 0.4],
+            }}
+            transition={{ duration: 1.8, repeat: Infinity, delay: 0.3 }}
           />
         </motion.div>
       )}
